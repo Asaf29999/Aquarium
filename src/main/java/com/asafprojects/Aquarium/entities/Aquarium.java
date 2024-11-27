@@ -16,6 +16,9 @@ public class Aquarium {
     @OneToMany(mappedBy = "aquarium", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Fish> fishes = new ArrayList<>();
 
+    public Aquarium() {
+    }
+
     public Aquarium(String name, List<Fish> fishes) {
         this.name = name;
         this.fishes = fishes;

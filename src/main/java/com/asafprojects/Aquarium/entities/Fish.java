@@ -15,6 +15,9 @@ public class Fish {
     @JoinColumn(name = "aquarium_id")
     private Aquarium aquarium;
 
+    public Fish() {
+    }
+
     public Fish(String name, String species, Aquarium aquarium) {
         this.name = name;
         this.species = species;

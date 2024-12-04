@@ -3,7 +3,7 @@ package com.asafprojects.Aquarium.entities;
 import jakarta.persistence.*;
 
 @Entity
-public class Fish {
+public abstract class Fish {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -15,13 +15,12 @@ public class Fish {
     @JoinColumn(name = "aquarium_id")
     private Aquarium aquarium;
 
-    public Fish() {
+    protected Fish() {
+        // Default no-args constructor for JPA
     }
 
-    public Fish(String name, String species, Aquarium aquarium) {
+    protected Fish(String name) {
         this.name = name;
-        this.species = species;
-        this.aquarium = aquarium;
     }
 
     public Long getId() {
@@ -42,10 +41,6 @@ public class Fish {
 
     public String getSpecies() {
         return species;
-    }
-
-    public void setSpecies(String species) {
-        this.species = species;
     }
 
     public Aquarium getAquarium() {

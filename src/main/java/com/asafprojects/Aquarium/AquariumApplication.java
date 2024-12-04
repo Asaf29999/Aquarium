@@ -26,17 +26,17 @@ public class AquariumApplication {
 			// Create some fish
 			Fish fish1 = new Fish();
 			fish1.setName("Nemo");
-			fish1.setSpecies("Clownfish");
+			//fish1.setSpecies("Clownfish");
 			fish1.setAquarium(aquarium);
 
 			Fish fish2 = new Fish();
 			fish2.setName("Dory");
-			fish2.setSpecies("Blue Tang");
+			//fish2.setSpecies("Blue Tang");
 			fish2.setAquarium(aquarium);
 
 			Fish fish3 = new Fish();
 			fish3.setName("Goldy");
-			fish3.setSpecies("Goldfish");
+			//fish3.setSpecies("Goldfish");
 			fish3.setAquarium(aquarium);
 
 			// Add fish to the aquarium's fish list
